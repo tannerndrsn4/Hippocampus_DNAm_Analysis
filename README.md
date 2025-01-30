@@ -11,3 +11,7 @@ Data Preprocessing
 6. Methylation Extraction
 
 DNA Methylation Analysis
+
+1. Model 1 ~ CpG-based with age as a continuous variable while including sex as a covariate
+2. Model 2 ~ DMR-based with age as a continuous variable while including sex as a covariate
+3. Model 3 ~ CpG-based ARIMA approach to identify nonlinear patterns in methylation with age while controlling for sex
