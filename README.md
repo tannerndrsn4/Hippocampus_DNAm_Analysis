@@ -4,7 +4,7 @@ Differential methylation analysis of RRBS data collected from 96 biobanked rhesu
 Data Preprocessing
 
 1. FastQC
-2. Trimming
+2. Trimming w TrimGalore
 3. FastQC
 4. Genome Index
 5. Mapping w Bismark
