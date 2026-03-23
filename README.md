@@ -12,6 +12,7 @@ Data Preprocessing
 
 DNA Methylation Analysis
 
-1. Model 1 ~ CpG-based with age as a continuous variable while including sex as a covariate
-2. Model 2 ~ DMR-based with age as a continuous variable while including sex as a covariate
-3. Model 3 ~ CpG-based ARIMA approach to identify nonlinear patterns in methylation with age while controlling for sex
+1. CpG-based differential methylation and variance analysis
+2. Region-based identification of age-associated regions using ARIMA modeling
+3. Genic integration with matched RNAseq
+4. Intergenic intersection analyses to identify overlap with transposable elements and human enhancers 
