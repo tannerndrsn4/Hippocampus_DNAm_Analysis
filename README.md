@@ -1,16 +1,16 @@
 # Hippocampus_DNAm_Analysis
 Differential methylation analysis of RRBS data collected from 86 biobanked rhesus macaque hippocampus samples. 
 
-Data Preprocessing
+## Data Preprocessing
 
-1. FastQC
+1. [FastQC](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/FastQC_rapa.sh)
 2. Trimming w TrimGalore
 3. FastQC
 4. Genome Index
 5. Mapping w Bismark
 6. Methylation Extraction
 
-DNA Methylation Analysis
+## DNA Methylation Analysis
 
 1. CpG-based differential methylation and variance analysis
 2. Region-based identification of age-associated regions using ARIMA modeling
