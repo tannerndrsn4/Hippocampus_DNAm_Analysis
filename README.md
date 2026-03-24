@@ -12,7 +12,7 @@ Differential methylation analysis of RRBS data collected from 86 biobanked rhesu
 
 ## DNA Methylation Analysis
 
-1. CpG-based differential methylation and variance analysis
-2. Region-based identification of age-associated regions using ARIMA modeling
-3. Genic integration with matched RNAseq
-4. Intergenic intersection analyses to identify overlap with transposable elements and human enhancers 
+1. CpG-based [differential methylation](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/Hippocampus_DMR_Analyses.R) and [variance](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/Hippocampus_Variance_Analyses.r) analysis
+2. Region-based [identification of age-associated regions](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/Hippocampus_ARIMA_DNA.R) using ARIMA modeling and [clustering](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/Hippocampus_ARIMA_Visualization_REGION.r)
+3. Genic [integration with matched RNAseq](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/IntersectionwRNAseq_Approach1.R)
+4. Intergenic [intersection analyses](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/Enhancer_TE_analysis.R) to identify overlap with transposable elements and human enhancers 
