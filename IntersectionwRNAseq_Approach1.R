@@ -1,21 +1,12 @@
-# ============================================================
-# Script: DNAm_RNAseq_Intersection.R
-# Purpose: Identify DNAm regions overlapping DEGs, include dataset cluster labels,
-#          and summarize by feature
-# ============================================================
-
-# --- Load libraries ---
 library(dplyr)
 library(readr)
 library(stringr)
 library(purrr)
 
-# --- User Inputs ---
 input_rdata <- "Annotated_REGION_Clusters.RData"
 deg_file <- "RNAseq_genes.csv"
 output_prefix <- "DNAm_RNAseq_Intersection"
 
-# Manually specify the RNAseq cluster label if your DEG file doesn’t include it
 default_rna_cluster <- "RNAseq_Cluster1"
 
 # ============================================================
@@ -182,11 +173,6 @@ cat("💾 Genic-only candidate regions saved as:",
 
 cat("💾 Genic-only duplicate gene summary saved as:",
     paste0(output_prefix, "_duplicate_genes_genic_only.csv"), "\n")
-
-# ============================================================
-# NEW: Save all distal intergenic regions across Clusters 1–4
-# (does NOT require overlap with RNAseq genes)
-# ============================================================
 
 # Reuse the same feature extraction logic you already defined later
 extract_feature <- function(anno) {
