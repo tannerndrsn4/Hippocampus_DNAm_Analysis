@@ -16,4 +16,4 @@ Differential methylation analysis of RRBS data collected from 86 biobanked rhesu
 2. Region-based [identification of age-associated regions](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/Hippocampus_ARIMA_DNA.R) using ARIMA modeling and [clustering](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/Hippocampus_ARIMA_Visualization_REGION.r)
 3. Genic [integration with matched RNAseq](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/IntersectionwRNAseq_Approach1.R)
 4. Intergenic [intersection analyses](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/Enhancer_TE_analysis.R) to identify overlap with transposable elements and human enhancers
-5. Gene methylation and expression association analysis 
+5. Gene methylation and expression [association analysis](https://github.com/tannerndrsn4/Hippocampus_DNAm_Analysis/blob/main/GeneBody_Methylation_Stratified_Analysis.R)  
