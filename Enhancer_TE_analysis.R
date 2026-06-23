@@ -1,6 +1,3 @@
-# -------------------------------
-# 1. Load Libraries
-# -------------------------------
 library(GenomicRanges)
 library(rtracklayer)
 library(regioneR)
@@ -8,9 +5,7 @@ library(AnnotationHub)
 library(tidyverse)
 library(plyranges)
 
-# -------------------------------
-# 2. Load Your Data
-# -------------------------------
+
 regions <- read_csv("DNAm_RNAseq_Intersection_distal_intergenic_all_clusters.csv")
 
 gr <- GRanges(seqnames = regions$chr,
@@ -21,12 +16,6 @@ gr <- GRanges(seqnames = regions$chr,
 # -------------------------------
 # 3. Import UCSC RepeatMasker for Mmul_10
 # -------------------------------
-# Option A: Download manually from UCSC Table Browser:
-#   Group: Repeats
-#   Track: RepeatMasker
-#   Table: rmsk
-#   Assembly: rheMac10 (Mmul_10)
-# Save as "rheMac10_rmsk.bed"
 
 repeatmasker <- import("rmsk_mmul10.bed")
 
@@ -67,14 +56,9 @@ write_csv(overlap_tbl, "Distal_intergenic_TE_overlaps.csv")
 
 library(regioneR)
 
-# Your objects:
-# gr            = your distal intergenic query regions (GRanges)
-# repeatmasker  = TE annotation (GRanges)
-# background    = your annotated_background.rds object
-
 background <- readRDS("annotated_background.rds")
 # Extract the GRanges from background
-background_gr <- background@anno  # this is the GRanges we’ll use as the universe
+background_gr <- background@anno  
 
 # Define genome
 genome_mmul10 <- getGenomeAndMask("rheMac10")
@@ -85,7 +69,7 @@ perm_test_TE <- overlapPermTest(
   A = gr,
   B = repeatmasker,
   genome = genome_mmul10$genome,
-  universe = background_gr,   # restrict randomization to your background regions
+  universe = background_gr,   
   ntimes = 100,
   alternative = "greater"
 )
@@ -103,7 +87,6 @@ plot(perm_test_TE)
 chain <- import.chain("rheMac10ToHg38.over.chain")
 
 # --- Ensure chromosome names have "chr" prefix ---
-# Fix for both query (gr) and background (background@anno)
 seqlevelsStyle(gr) <- "UCSC"
 seqlevelsStyle(background@anno) <- "UCSC"
 
@@ -122,7 +105,6 @@ cat("✅ LiftOver complete:",
 # -------------------------------
 # 7. Import ENCODE Enhancer Regions (hg38)
 # -------------------------------
-# Read manually (it's tab-separated)
 enh_df <- read_tsv("GRCh38-ELS.bed", 
                    col_names = c("chr", "start", "end", "dataset_ID", "enhancer_ID", "enhancer_type"),
                    col_types = cols(
@@ -267,7 +249,6 @@ if (pval_enh < 0.05) {
 cat("\n🔍 Checking for regions overlapping both TEs and enhancers...\n")
 
 # --- Step 10.1: Map lifted-over enhancer regions back to macaque coordinates ---
-# (We invert the chain to go hg38 → rheMac10)
 chain_rev <- import.chain("hg38ToRheMac10.over.chain")
 
 # Lift enhancer-overlapping regions back
