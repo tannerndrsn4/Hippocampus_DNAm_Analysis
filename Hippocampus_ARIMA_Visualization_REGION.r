@@ -115,7 +115,7 @@ pca_data <- pca_res$x[, 1:50]
 
 cat("Running gap statistic with k-means on PCA-reduced data...\n")
 set.seed(123)
-gap_stat <- clusGap(pca_data, FUN = kmeans, K.max = 4, B = 50)
+gap_stat <- clusGap(pca_data, FUN = kmeans, K.max = 10, B = 50)
 gap_stat
 
 # Determine optimal k
