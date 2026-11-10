@@ -1,5 +1,5 @@
 # Hippocampus_DNAm_Analysis
-Differential methylation analysis of RRBS data collected from 86 biobanked rhesus macaque hippocampus samples. Includes pipelines for DNAm analyses at the CpG and region level as well as integration with matched RNAseq. Repository for all code used in the manuscript: [DNA methylation remodeling across adulthood in the rhesus macaque hippocampus]([10.1016/j.exger.2026.113378](https://www.sciencedirect.com/science/article/pii/S053155652600358X))   
+Differential methylation analysis of RRBS data collected from 86 biobanked rhesus macaque hippocampus samples. Includes pipelines for DNAm analyses at the CpG and region level as well as integration with matched RNAseq. Repository for all code used in the manuscript: [DNA methylation remodeling across adulthood in the rhesus macaque hippocampus](https://www.sciencedirect.com/science/article/pii/S053155652600358X)   
 
 ## Data Preprocessing
 
